@@ -1,0 +1,31 @@
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: flex-end;
+
+}
+
+.icon-btn {
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.archived-table-content td {
+  white-space: nowrap;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notes-table-content td {
+  max-width: 450px;
+}
