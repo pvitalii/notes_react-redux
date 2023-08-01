@@ -28,7 +28,7 @@ export const NotesTable = ({ notes }: {notes: Note[]}) => {
     <Table tableHeaders={notesTableHeaders}>
       {
         notes.map((note) =>
-          <tr className={isArchived ? 'archived-table-content' : 'notes-table-content'}>
+          <tr key={note.id} className={isArchived ? 'archived-table-content' : 'notes-table-content'}>
             <td><div className="name-row"><img src={`img/${note.category.replaceAll(/ /ig, '_')}.svg`} alt={note.category} />{note.name}</div></td>
             <td>{note.created}</td>
             <td>{note.category}</td>

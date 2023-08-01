@@ -31,10 +31,10 @@ export const ActionForm = (props: ActionFormProps) => {
 
           </div>
 
-          <Field as="select" name="category" defaultValue={props.initialValues.category}>
+          <Field as="select" name="category">
             {
               Object.values(NOTE_CATEGORY).map((category) =>
-                <option value={category}>{category}</option>
+                <option key={category} value={category}>{category}</option>
               )
             }
           </Field>

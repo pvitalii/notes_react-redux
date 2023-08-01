@@ -13,7 +13,7 @@ export const Table = (props: tableProps) => {
         <tr className="table-header">
           {
             props.tableHeaders.map((header) =>
-              <td>{header}</td>
+              <td key={header?.toString()}>{header}</td>
             )
           }
         </tr>
