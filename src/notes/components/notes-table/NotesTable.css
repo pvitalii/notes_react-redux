@@ -19,13 +19,16 @@
   border: none;
 }
 
-.archived-table-content td {
+.archived-table-content td,
+.archived-table-content .name-row {
   white-space: nowrap;
   max-width: 250px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.notes-table-content td {
+.notes-table-content td,
+.notes-table-content .name-row div {
+  word-break: break-all;
   max-width: 450px;
 }
