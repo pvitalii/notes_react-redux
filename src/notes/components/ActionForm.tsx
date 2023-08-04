@@ -44,7 +44,7 @@ export const ActionForm = (props: ActionFormProps) => {
               <div className="text-xs text-red-600 absolute">{errors.content}</div>
             ) : null}
           </div>
-          <button className="py-2 px-2 border-1 border-solid border-black bg-gray-100" type="submit">Submit</button>
+          <button className="modal-btn" type="submit">Submit</button>
         </Form>
       )}
     </Formik>
