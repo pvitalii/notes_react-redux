@@ -1,8 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-import { NOTE_CATEGORY } from "../../../common/utils/note-category.enum";
-import { ActionFormValues } from "../../../common/interfaces/action-form-values.interface";
-import "./ActionForm.css"
+import { NOTE_CATEGORY } from "../../common/utils/note-category.enum";
+import { ActionFormValues } from "../../common/interfaces/action-form-values.interface";
 
 type ActionFormProps = {
   initialValues: ActionFormValues,
@@ -22,16 +21,16 @@ export const ActionForm = (props: ActionFormProps) => {
       validationSchema={validationSchema}
     >
       {({ errors, touched }) => (
-        <Form className="action-form">
-          <div className="form-field">
-            <Field id="name" name="name" placeholder="Name" />
+        <Form className="flex flex-col items-center gap-6 p-8">
+          <div className="w-full">
+            <Field id="name" name="name" placeholder="Name" className="w-full py-3 px-2 border-1 border-solid border-black" />
             {errors.name && touched.name ? (
-              <div className="error">{errors.name}</div>
+              <div className="text-xs text-red-600 absolute">{errors.name}</div>
             ) : null}
 
           </div>
 
-          <Field as="select" name="category">
+          <Field as="select" name="category" className="w-full py-3 px-2 border-1 border-solid border-black">
             {
               Object.values(NOTE_CATEGORY).map((category) =>
                 <option key={category} value={category}>{category}</option>
@@ -39,13 +38,13 @@ export const ActionForm = (props: ActionFormProps) => {
             }
           </Field>
 
-          <div className="form-field">
-            <Field id="content" name="content" placeholder="Content" />
+          <div className="w-full">
+            <Field id="content" name="content" placeholder="Content" className="w-full py-3 px-2 border-1 border-solid border-black" />
             {errors.content && touched.content ? (
-              <div className="error">{errors.content}</div>
+              <div className="text-xs text-red-600 absolute">{errors.content}</div>
             ) : null}
           </div>
-          <button type="submit">Submit</button>
+          <button className="py-2 px-2 border-1 border-solid border-black bg-gray-100" type="submit">Submit</button>
         </Form>
       )}
     </Formik>

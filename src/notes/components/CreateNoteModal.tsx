@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Modal } from "../../../common/components/modal/Modal";
-import { useAppDispatch } from "../../../store/hooks";
-import { notesActions } from "../../../store/notes/notes.slice";
-import { dateParse } from "../../../common/utils/date-parse";
-import { NOTE_CATEGORY } from "../../../common/utils/note-category.enum";
-import { ActionForm } from "../action-form/ActionForm";
-import { ActionFormValues } from "../../../common/interfaces/action-form-values.interface";
+import { Modal } from "../../common/components/Modal";
+import { useAppDispatch } from "../../store/hooks";
+import { notesActions } from "../../store/notes/notes.slice";
+import { dateParse } from "../../common/utils/date-parse";
+import { NOTE_CATEGORY } from "../../common/utils/note-category.enum";
+import { ActionForm } from "./ActionForm";
+import { ActionFormValues } from "../../common/interfaces/action-form-values.interface";
 
 export const CreateNoteModal = () => {
   const [isCreateOpened, setIsCreateOpened] = useState(false);
@@ -30,7 +30,7 @@ export const CreateNoteModal = () => {
 
   return (
     <div>
-      <button onClick={() => setIsCreateOpened(true)}>Create Note</button>
+      <button className="modal-btn" onClick={() => setIsCreateOpened(true)}>Create Note</button>
       <Modal isOpened={isCreateOpened} onClose={() => setIsCreateOpened(false)}>
         <ActionForm initialValues={initialValues} onSubmit={submitCreation} />
       </Modal>

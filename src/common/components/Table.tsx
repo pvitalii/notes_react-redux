@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import "./Table.css";
 
 type tableProps = {
   tableHeaders: ReactNode[],
@@ -8,9 +7,9 @@ type tableProps = {
 
 export const Table = (props: tableProps) => {
   return (
-    <table className="table">
+    <table className="text-center w-full border-collapse">
       <tbody>
-        <tr className="table-header">
+        <tr className="bg-primary text-white">
           {
             props.tableHeaders.map((header) =>
               <td key={header?.toString()}>{header}</td>
