@@ -9,13 +9,4 @@
     @apply border-solid;
     @apply border-gray-300;
   }
-
-  .modal-btn {
-    @apply py-2;
-    @apply px-2; 
-    @apply border-1; 
-    @apply border-solid; 
-    @apply border-black; 
-    @apply bg-gray-100;
-  }
 }
