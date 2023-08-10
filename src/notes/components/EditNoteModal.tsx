@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Modal } from "../../common/components/Modal"
+import { Modal } from "../../common/components/modal/Modal"
 import { Note } from "../../common/interfaces/note.interface";
 import { useAppDispatch } from "../../store/hooks";
 import { notesActions } from "../../store/notes/notes.slice";
 import { dateParse } from "../../common/utils/date-parse";
-import { ActionForm } from "./ActionForm";
+import { ActionForm } from "./action-form/ActionForm";
 import { ActionFormValues } from "../../common/interfaces/action-form-values.interface";
 
 export const EditNoteModal = ({ note }: { note: Note }) => {

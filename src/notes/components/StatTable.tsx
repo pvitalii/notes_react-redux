@@ -1,4 +1,4 @@
-import { Table } from "../../common/components/Table";
+import { Table } from "../../common/components/table/Table";
 import { useGetNotes } from "../../store/notes/notes.hooks";
 import { NOTE_CATEGORY } from "../../common/utils/note-category.enum";
 

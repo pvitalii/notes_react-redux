@@ -1,7 +1,7 @@
-import { Note } from "../../common/interfaces/note.interface"
-import { useAppDispatch } from "../../store/hooks";
-import { notesActions } from "../../store/notes/notes.slice";
-import { EditNoteModal } from "./EditNoteModal";
+import { Note } from "../../../common/interfaces/note.interface"
+import { useAppDispatch } from "../../../store/hooks";
+import { notesActions } from "../../../store/notes/notes.slice";
+import { EditNoteModal } from "../EditNoteModal";
 
 export const NoteItem = ({ note }: { note: Note }) => {
   const dispatch = useAppDispatch();

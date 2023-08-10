@@ -1,7 +1,8 @@
 import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-import { NOTE_CATEGORY } from "../../common/utils/note-category.enum";
-import { ActionFormValues } from "../../common/interfaces/action-form-values.interface";
+import { NOTE_CATEGORY } from "../../../common/utils/note-category.enum";
+import { ActionFormValues } from "../../../common/interfaces/action-form-values.interface";
+import { Button } from "../../../common/components/button/Button";
 
 type ActionFormProps = {
   initialValues: ActionFormValues,
@@ -44,7 +45,7 @@ export const ActionForm = (props: ActionFormProps) => {
               <div className="text-xs text-red-600 absolute">{errors.content}</div>
             ) : null}
           </div>
-          <button className="modal-btn" type="submit">Submit</button>
+          <Button type="submit">Submit</Button>
         </Form>
       )}
     </Formik>

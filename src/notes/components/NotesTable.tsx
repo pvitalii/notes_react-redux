@@ -1,6 +1,6 @@
-import { Table } from "../../common/components/Table";
+import { Table } from "../../common/components/table/Table";
 import { Note } from "../../common/interfaces/note.interface";
-import { NoteItem } from "./NoteItem";
+import { NoteItem } from "./note-item/NoteItem";
 
 export const NotesTable = ({ notes }: {notes: Note[]}) => {
   const notesTableHeaders = [
